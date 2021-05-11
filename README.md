@@ -1,4 +1,10 @@
-# Installation
+# Hyper-go
+
+## Dependencies
+
+[xdotool](https://github.com/jordansissel/xdotool)
+
+## Installation
 
 `$ go install`
 
@@ -6,7 +12,7 @@
 
 `$ hyper-go path-to-config.yml`
 
-### Configuration
+## Configuration
 
 ```yaml
 settings:
