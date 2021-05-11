@@ -88,7 +88,7 @@ func raise(X *xgbutil.XUtil) {
 		log.Println(err)
 		return
 	}
-	lastClass = c.Class
+	lastClass = c.Instance
 	cycleCount++
 	if cycleCount == len(winList) {
 		cycleCount = 0
@@ -103,6 +103,7 @@ func sendStroke(X *xgbutil.XUtil, from string, to string) {
 	w := goxdo.Window(active)
 	for _, k := range keys {
 		if k == "Mod3" {
+			//TODO make Mod key configurable
 			xdo.SendKeysequenceWindowUp(w, "Hyper_L", 0)
 		} else {
 			xdo.SendKeysequenceWindowUp(w, k, 0)
